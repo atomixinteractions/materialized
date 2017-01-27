@@ -1,0 +1,24 @@
+{
+  "name": "material.ui-documentation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Documentation for Material components",
+  "scripts": {
+    "start": "node ./server",
+    "build": "cross-env NODE_ENV=production ../node_modules/.bin/webpack -p --config ./webpack.docs.prod.js"
+  },
+  "dependencies": {
+    "cross-env": "^3.1.4",
+    "babel-standalone": "^6.21.1",
+    "codemirror": "^5.23.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
+    "history": "^3.2.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.26.0",
+    "markdown-loader": "^0.1.7",
+    "normalize-styled": "^1.0.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1"
+  }
+}
