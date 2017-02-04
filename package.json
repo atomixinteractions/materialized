@@ -1,5 +1,5 @@
 {
-  "name": "material.ui",
+  "name": "materialized",
   "version": "0.1.0",
   "description": "Material components for React",
   "main": "dist/",
