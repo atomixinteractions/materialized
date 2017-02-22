@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "transform-export-extensions",
+    ["transform-define", "./defines.js"],
+    ["transform-es2015-template-literals", {
+      "loose": true,
+      "spec": false
+    }],
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ],
+  "presets": [
+    "es2015",
+    "es2016",
+    "es2017",
+    "react",
+    "stage-3"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types"
+      ],
+      "presets": [
+      ]
+    },
+    "development": {
+      "presets": [
+      ],
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "presets": [
+      ],
+      "plugins": [
+      ]
+    }
+  }
+}

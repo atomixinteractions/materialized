@@ -1,0 +1,82 @@
+{
+  "name": "materialized",
+  "version": "0.1.0",
+  "description": "Material react components",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 jest",
+    "build": "cross-env NODE_ENV=production babel --ignore *.test.js -d ./dist src && npm run copy",
+    "copy": "cp ./package.json ./dist/",
+    "clean": "rimraf dist/ coverage/"
+  },
+  "author": "Sergey Sova <i.am@lestad.net> (https://lestad.top)",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom",
+      "react-addons-test-utils",
+      "enzyme",
+      "ramda"
+    ],
+    "modulePaths": [
+      "src"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/themes"
+    ],
+    "testPathDirs": [
+      "<rootDir>/src"
+    ]
+  },
+  "dependencies": {
+    "color": "^1.0.3",
+    "inputmask-core": "^2.2.0",
+    "jss": "^6.3.0",
+    "jss-preset-default": "^1.3.1",
+    "ramda": "^0.23.0",
+    "rc-slider": "^6.1.0",
+    "react-headroom": "^2.1.3",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-jss": "^5.3.0",
+    "react-onclickoutside": "^5.8.4",
+    "recompose": "^0.22.0"
+  },
+  "peerDependencies": {
+    "react": "15.x",
+    "react-dom": "15.x"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.21.0",
+    "babel-jest": "^18.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-define": "^1.2.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.2.11",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "cross-env": "^3.1.4",
+    "enzyme": "^2.7.1",
+    "express": "^4.14.0",
+    "jest": "^18.1.0",
+    "jest-cli": "^18.1.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "rimraf": "^2.5.4"
+  }
+}
